@@ -1,0 +1,10 @@
+.tulisan_warna{
+    text-align: center;
+    color: blue;
+}
+body{
+    text-decoration: underline;
+}
+.jarak_paragraf {
+    letter-spacing: 5px;
+}   
