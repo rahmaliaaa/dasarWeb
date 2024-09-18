@@ -37,3 +37,16 @@ $hasilNotA = !$a;
 echo "Hasil dari NOT $a adalah : $hasilNotA<br>";
 $hasilNotB = !$b;
 echo "Hasil dari NOT $b adalah : $hasilNotB<br>";
+
+echo "<br><br>";
+$c = $a += $b;
+echo "Hasil dari 10 += $b (penjumlahan): $c<br>";
+$d = $a -= $b;
+echo "Hasil dari $c -= $b (pengurangan): $d<br>";
+$e = $a *= $b;
+echo "Hasil dari $d *= $b (perkalian): $e<br>";
+$f = $a /= $b;
+echo "Hasil dari $e /= $b (pembagian): $f<br>";
+$g = $a %= $b;
+echo "Hasil dari $f %= $b (modulus): $g<br>";
+
