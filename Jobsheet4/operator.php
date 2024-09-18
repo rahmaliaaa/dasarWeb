@@ -50,3 +50,20 @@ echo "Hasil dari $e /= $b (pembagian): $f<br>";
 $g = $a %= $b;
 echo "Hasil dari $f %= $b (modulus): $g<br>";
 
+echo "<br><br>";
+$hasilIdentik = $a === $b;
+echo "Hasil dari $a === $b (identik): $hasilIdentik<br>";
+$hasilTidakIdentik = $a !== $b;
+echo "Hasil dari $a !== $b (tidak identik): $hasilTidakIdentik<br>";
+
+//soal cerita
+$totalKursi = 45; 
+$kursiTerisi = 28; 
+
+$kursiKosong = $totalKursi - $kursiTerisi;
+$persentaseKosong = ($kursiKosong / $totalKursi) * 100;
+
+echo "Total kursi di restoran: $totalKursi<br>";
+echo "Kursi yang telah ditempati: $kursiTerisi<br>";
+echo "Jumlah kursi kosong: $kursiKosong<br>";
+echo "Persentase kursi kosong: " . number_format($persentaseKosong, 2) . "%<br>";
