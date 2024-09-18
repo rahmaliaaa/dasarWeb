@@ -27,3 +27,13 @@ $hasilLebihKecilSama = $a <- $b;
 echo "Hasil dari $a lebih kecil sama dengan $b adalah : $hasilLebihKecilSama<br>";
 $hasilLebihBesarSama = $a >= $b;
 echo "Hasil dari $a lebih besar sama dengan $b adalah : $hasilLebihBesarSama<br>";
+
+echo "<br><br>";
+$hasilAnd = $a && $b;
+echo "Hasil dari $a AND $b adalah : $hasilAnd<br>";
+$hasilOr = $a || $b;
+echo "Hasil dari $a OR $b adalah : $hasilOr<br>";
+$hasilNotA = !$a;
+echo "Hasil dari NOT $a adalah : $hasilNotA<br>";
+$hasilNotB = !$b;
+echo "Hasil dari NOT $b adalah : $hasilNotB<br>";
