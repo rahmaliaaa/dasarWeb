@@ -54,7 +54,6 @@ foreach ($skorUjian as $nilai) {
     }
     echo "Nilai: $nilai (Lulus) <br>";
 }
-
 echo "<br><br>";
 
 $nilaiSiswa = [85, 92, 78, 64, 90, 75, 88, 79, 70, 96];
