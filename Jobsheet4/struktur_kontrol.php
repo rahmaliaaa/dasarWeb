@@ -77,6 +77,11 @@ $diskon = 0.2;
 if ($totalPembelian > 100000){
     $hargaDiskon = $hargaProduk - ($hargaProduk * $diskon);
     echo "Harga setelah diskon: $hargaDiskon";
-} else {
+} else { 
     echo "Harga Normal: $hargaProduk";
 }
+
+$skor = 500;
+echo "Total Skor Pemain Adalah: $skor. <br>";
+echo "Apakah pemain mendapatkan hadiah tambahan? ";
+echo ($skor > 500) ? "<b>YES</b>" : "<b>NO</b>";
