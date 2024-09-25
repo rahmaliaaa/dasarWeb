@@ -27,4 +27,47 @@ $daftarKaryawan = [
     echo "Daftar karyawan dengan pengalaman kerja lebih dari 5 tahun: " . implode(', ',
     $karyawanPengalamanLimaTahun);
 
-    echo "<br><br>";
+echo "<br><br>";
+$daftarNilai = [
+    'Matematika' => [
+        ['Alice', 85],
+        ['Bob', 92],
+        ['Charlie', 78],
+    ],    
+    'Fisika' => [
+        ['Alice', 90],
+        ['Bob', 88],
+        ['Charlie', 75],
+    ],
+    'Kimia' => [
+        ['Alice', 92],
+        ['Bob', 80],
+        ['Charlie', 85],
+    ],
+];
+    $matakuliah = 'Fisika';
+    echo "Daftar nilai mahasiswa dalam mata kuliah $matakuliah: <br>";
+    
+    foreach ($daftarNilai[$matakuliah] as $nilai) {
+        echo "Nama: {$nilai[0]}, Nilai: {$nilai[1]} <br>";
+}
+echo "<br><br>";
+$daftarNilai = [
+    ['Alice', 85],
+    ['Bob', 92],
+    ['Charlie', 78],
+    ['David', 64],
+    ['Eva', 90]
+];
+    
+$totalNilai = 0;
+foreach ($daftarNilai as $mahasiswa) {
+    $totalNilai += $mahasiswa[1];
+    $avg = $totalNilai / count($daftarNilai);
+}
+foreach ($daftarNilai as $mahasiswa) {
+    if ($mahasiswa[1] < $avg) {
+        continue;
+    }
+    echo "Mahasiswa: {$mahasiswa[0]}, Nilai: {$mahasiswa[1]} <br>";
+}
