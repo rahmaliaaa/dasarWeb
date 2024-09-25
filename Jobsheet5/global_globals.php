@@ -7,4 +7,4 @@ function addition () {
 }
 addition();
 echo $z;
-?>
+?> 
