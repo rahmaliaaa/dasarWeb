@@ -9,7 +9,10 @@
     echo $Listdosen[2] . "<br>";
     echo $Listdosen[0] . "<br>";
     echo $Listdosen[1] . "<br>";
-
+    echo "<h4>Looping</h4>";
+        for ($i= 0;$i<count($Listdosen);$i++) {
+    echo $Listdosen[$i] . "<br>";
+}
 ?>
 </body>
 </htmL>
