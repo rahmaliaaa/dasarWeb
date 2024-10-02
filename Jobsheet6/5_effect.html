@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script src="jquery-3.7.1.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Fungsi untuk menyembunyikan semua div
+            $(".tomboll").click(function() {
+                $("div").hide();
+            });
+
+            // Fungsi untuk menampilkan semua div
+            $(".tombo12").click(function() {
+                $("div").show();
+            });
+
+            // Fungsi untuk fadeOut (menghilang secara perlahan) dengan berbagai durasi
+            $(".tombo13").click(function() {
+                $("#div1").fadeOut();
+                $("#div2").fadeOut("slow");
+                $("#div3").fadeOut(3000); // 3 detik
+            });
+
+            // Fungsi untuk fadeIn (muncul secara perlahan) dengan berbagai durasi
+            $(".tombo14").click(function() {
+                $("#div1").fadeIn();
+                $("#div2").fadeIn("slow");
+                $("#div3").fadeIn(3000); // 3 detik
+            });
+
+            // Fungsi untuk fadeTo (mengatur opacity) dengan berbagai nilai opacity
+            $(".tombo15").click(function() {
+                $("#div1").fadeTo("slow", 0.15); // opacity 15%
+                $("#div2").fadeTo("slow", 0.4);  // opacity 40%
+                $("#div3").fadeTo("slow", 0.7);  // opacity 70%
+            });
+        });
+    </script>
+</head>
+<body>
+    <p>JQuery Effect</p>
+
+    <!-- Div kotak dengan ID dan class -->
+    <div id="div1" class="kotak"></div> <br><br>
+    <div id="div2" class="kotak"></div> <br><br>
+    <div id="div3" class="kotak"></div> <br><br>
+
+    <!-- Tombol untuk menjalankan efek JQuery -->
+    <button class="tomboll">Sembunyikan</button>
+    <button class="tombo12">Tampilkan</button>
+    <button class="tombo13">Fade Out</button>
+    <button class="tombo14">Fade In</button>
+    <button class="tombo15">Fade To</button>
+</body>
+</html>
