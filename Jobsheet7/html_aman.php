@@ -30,16 +30,17 @@
             } else {
                 echo "<p>Input tidak boleh kosong!</p>";
             }
-        }
-        // Memeriksa apakah input adalah email yang valid
-        $email = $_POST['email'];
+        // no 6
+            // Memeriksa apakah input adalah email yang valid
+            $email = $_POST['email'];
 
-        if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            // Lanjutkan dengan pengolahan email yang aman
-            echo "<p>Email yang valid : " . htmlspecialchars($email, ENT_QUOTES, 'UTF-8') . "</p>";
-        } else {
-            // Tangani input yang tidak valid
-            echo "<p>Email tidak valid!</p>";
+            if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+                // Lanjutkan dengan pengolahan email yang aman
+                echo "<p>Email yang valid : " . htmlspecialchars($email, ENT_QUOTES, 'UTF-8') . "</p>";
+            } else {
+                // Tangani input yang tidak valid
+                echo "<p>Email tidak valid!</p>";
+            }
         }
     ?>
  </body>
