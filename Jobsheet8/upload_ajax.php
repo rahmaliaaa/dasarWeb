@@ -15,7 +15,7 @@ if (isset($_FILES['file'])) {
     if ($file_size > 2097152) {
     $errors[] = 'Ukuran file tidak boleh lebih dari 2 MB';
     }
-
+ 
     if (empty($errors) == true) {
         move_uploaded_file($file_tmp, "documents/" . $file_name);
         echo "File berhasil diunggah.";
