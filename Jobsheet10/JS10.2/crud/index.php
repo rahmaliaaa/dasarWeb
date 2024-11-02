@@ -20,15 +20,15 @@
         echo "<tr><th>No</th><th>Nama</th><th>Jenis Kelamin</th>
               <th>Alamat</th><th>No. Telp</th><th>Aksi</th></tr>";
         while ($row = mysqli_fetch_array($result)) {
-            $kelamin = ($row["jenis_kelamin"] === 'L')? 'Laki-laki' : 'Perempuan';
+            $kelamin = ($row["jenis_kelamin"] === 'L')? 'L' : 'P';
             echo "<tr>                          
-                    <td>" . $no++ . "</td><td>" . $row["nama"] . "</td>
-                    <td>" . $kelamin . "</td><td>" . $row["alamat"] . "</td>
-                    <td>" . $row["no_telp"] . "</td>
-                    <td><a href='edit.php?id=" . $row["id"] . "'>Edit</a>
-                    <a href='#' onclick='konfirmasiHapus(" . $row["id"] .",\"".$row["nama"] ."\")'>Hapus</a></td>
-                    </tr>";
-        }
+                  <td>" . $no++ . "</td><td>" . $row["nama"] . "</td>
+                  <td>" . $kelamin."</td><td>".$row["alamat"] . "</td>
+                  <td>" . $row["no_telp"] . "</td>
+                  <td><a href='edit.php?id=" . $row["id"] . "'>Edit</a>
+                  <a href='#' onclick='konfirmasiHapus(" . $row["id"] .",\"".$row["nama"] ."\")'>Hapus</a></td>
+                  </tr>";
+        } 
         echo "</table>";
     } else {
         echo "Tidak ada data.";
@@ -40,7 +40,7 @@
     function konfirmasiHapus(id, nama) {
         var konfirmasi = confirm("Apakah Anda yakin ingin menghapus data dengan Nama " + nama + "?");
         if (konfirmasi) {
-            window. location.href = "proses.php?aksi=hapus&id=" + id;
+            window.location.href = "proses.php?aksi=hapus&id=" + id;
         }
     }
     </script>
