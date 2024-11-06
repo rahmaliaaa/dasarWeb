@@ -125,18 +125,18 @@ include 'auth.php';
             document.getElementById("err_no_telp").innerHTML = ""; 
         }
         if (nama!= "" && alamat!= "" && (document.getElementById("jenkel1").checked == true || document.getElementById("jenkel2").checked == true) && no_telp != "") { 
-            $.ajax({ 
-                type: 'POST', 
-                url: "form_action.php", 
-                data: data, 
-                success: function() { 
-                    $('#data').load("data.php"); 
-                    document.getElementById("id").value = ""; 
-                    document.getElementById("form-data").reset(); 
-                }, error: function(response) { 
-                console.log(response.responseText); 
-                } 
-            }); 
+            $.ajax({
+                type: 'POST',
+                url: "hapus_data.php",
+                data: { id: id, csrf_token: $('meta[name="csrf-token"]').attr('content') },
+                success: function() {
+                    $('#data').load("data.php");  // Memuat ulang data setelah menghapus
+                },
+                error: function(response) {
+                    console.log(response.responseText);
+                }
+            });
+
         } 
     });
     </script>
