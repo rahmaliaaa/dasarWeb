@@ -72,77 +72,25 @@
 // $cat->meow();
 // $dog->bark();
 
-// interface Shape
-// {
-//     public function calculateArea();
-// }
+//class Car { // soal 1.4
+//    private $brand;
 
-// class Circle implements Shape
-// {
-//     private $radius;
+//    public function __construct($brand) {
+//        echo "A new car is created.<br>";
+//        $this->brand = $brand;
+//    }
 
-//     public function __construct($radius)
-//     {
-//         $this->radius = $radius;
-//     }
+//    public function getBrand() {
+//        return $this->brand;
+//    }
 
-//     public function calculateArea()
-//     {
-//         return pi() * pow($this->radius, 2);
-//     }
-// }
+//    public function __destruct() {
+//        echo "The car is destroyed.<br>";
+//    }
+//}
 
-// class Rectangle implements Shape
-// {
-//     private $width;
-//     private $height;
-
-//     public function __construct($width, $height)
-//     {
-//         $this->width = $width;
-//         $this->height = $height;
-//     }
-
-//     public function calculateArea()
-//     {
-//         return $this->width * $this->height;
-//     }
-// }
-
-// function printArea(Shape $shape)
-// {
-//     echo "Area: " . $shape->calculateArea() . "<br>";
-// }
-
-// $circle = new Circle(5);
-// $rectangle = new Rectangle(4, 6);
-
-// printArea($circle);
-// printArea($rectangle);
-
-
-
-
-
-class Car { // soal 1.4
-    private $brand;
-
-    public function __construct($brand) {
-        echo "A new car is created.<br>";
-        $this->brand = $brand;
-    }
-
-    public function getBrand() {
-        return $this->brand;
-    }
-
-    public function __destruct() {
-        echo "The car is destroyed.<br>";
-    }
-}
-
-$car = new Car("Toyota");
-echo "Brand: " . $car->getBrand() . "<br>";
+//$car = new Car("Toyota");
+//echo "Brand: " . $car->getBrand() . "<br>";
 
 class Animal {
     public $name;
@@ -173,4 +121,45 @@ $animal = new Animal("Dog", 3, "Brown");
 echo "Name: " . $animal->name . "<br>";
 echo "Age: " . $animal->getAge() . "<br>";
 echo "Color: " . $animal->getColor() . "<br>";
+
+
+interface Shape {
+    public function calculateArea();
+}
+
+class Circle implements Shape {
+    private $radius;
+
+    public function __construct($radius) {
+        $this->radius = $radius;
+    }
+
+    public function calculateArea() {
+        return pi() * pow($this->radius, 2);
+    }
+}
+
+class Rectangle implements Shape {
+    private $width;
+    private $height;
+
+    public function __construct($width, $height) {
+        $this->width = $width;
+        $this->height = $height;
+    }
+
+    public function calculateArea() {
+        return $this->width * $this->height;
+    }
+}
+
+function printArea(Shape $shape) {
+    echo "Area: " . $shape->calculateArea() . "<br>";
+}
+
+$circle = new Circle(5);
+$rectangle = new Rectangle(4, 6);
+
+printArea($circle);
+printArea($rectangle);
 
