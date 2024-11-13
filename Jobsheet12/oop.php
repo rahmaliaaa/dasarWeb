@@ -124,11 +124,6 @@
 
 
 
-$circle = new Circle(5, "Blue");
-
-echo "Area of Circle: " . $circle->calculateArea() . "<br>";
-echo "Color of Circle: " . $circle->getColor() . "<br>";
-
 class Car { // soal 1.4
     private $brand;
 
