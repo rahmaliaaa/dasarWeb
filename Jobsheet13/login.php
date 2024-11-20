@@ -47,7 +47,6 @@
           </div>'; 
         } 
       ?> 
-
       <form action="action/auth.php?act=login" method="post" id="form-login"> 
         <div class="input-group mb-3"> 
           <input type="text" class="form-control" name="username" placeholder="Username"> 
@@ -57,7 +56,6 @@
             </div> 
           </div> 
         </div> 
-
         <div class="input-group mb-3"> 
           <input type="password" class="form-control" name="password" placeholder="Password"> 
           <div class="input-group-append"> 
