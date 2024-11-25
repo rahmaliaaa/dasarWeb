@@ -121,7 +121,7 @@
                 $.ajax({ 
                     url: $(form).attr('action'),                     method: 'post', 
                     data: $(form).serialize(),                     success: function(response){                         var result = JSON.parse(response);                         if(result.status){ 
-                            $('#form-data').modal('hide'); 
+                             $('#form-data').modal('hide'); 
                             tabelData.ajax.reload(); // reload data tabel 
                         }else{ 
                             alert(result.message); 
